@@ -1,4 +1,4 @@
-function [ convFlag, x1, x2, sbar2, check ] = isosc( f1, eta, m  )
+function [ convFlag, x1, x2, sbar2, check ] = isosc( f2, s1, s2, m  )
     % Implementation of Stringfellow-Parks model
     % constants
     a = 5/3;
@@ -11,9 +11,10 @@ function [ convFlag, x1, x2, sbar2, check ] = isosc( f1, eta, m  )
     tiny = 1.0e-12; % realmin('double');
     
     % hardness and volume fraction
-    s2 = 1.0;
-    s1 = s2/eta;
-    f2 = 1.0 - f1;
+%     s2 = 1.0;
+%     s1 = s2/eta;
+%     s2 = eta*s1;
+    f1 = 1.0 - f2;
 
     flag2 = 0;
     
